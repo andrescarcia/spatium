@@ -18,7 +18,7 @@ const roomsDatabase = {
       "Muita luz natural",
       "Pátio privativo"
     ],
-    image: "/Conforto.JPG"
+    image: "/room5.png"
   },
   "2": {
     title: "Quarto Deluxe",
@@ -66,7 +66,7 @@ const Room = () => {
       </nav>
 
       <div className="room-hero">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -74,7 +74,7 @@ const Room = () => {
         >
           {room.title}
         </motion.h1>
-        
+
         <div className="room-meta-bar">
           <div className="room-meta-item">Spatium Residence</div>
           <div className="room-meta-item">{room.area}</div>
@@ -82,13 +82,13 @@ const Room = () => {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="room-main-image-container"
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
-        <img src={room.image} alt={room.title} className="room-main-image" />
+        <img src={`${import.meta.env.BASE_URL}${room.image.startsWith('/') ? room.image.slice(1) : room.image}`} alt={room.title} className="room-main-image" />
       </motion.div>
 
       <div className="room-content-grid">
@@ -97,7 +97,7 @@ const Room = () => {
           <p>{room.desc}</p>
           <button className="book-btn">Reservar Agora</button>
         </div>
-        
+
         <div className="room-features-col">
           <h3>Comodidades</h3>
           <ul className="room-features-list">

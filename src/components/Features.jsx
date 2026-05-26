@@ -18,7 +18,7 @@ const Features = () => {
           <p className="features-intro">
             Acreditamos num futuro melhor planeando o teu conforto com práticas eficientes e sustentáveis. Cada projeto nosso garante a melhor experiência e comunidade.
           </p>
-          <img src="/Deluxe.JPG" alt="Deluxe Room" className="features-side-img" />
+          <img src={`${import.meta.env.BASE_URL}Deluxe.JPG`} alt="Deluxe Room" className="features-side-img" />
         </div>
         
         <motion.div 

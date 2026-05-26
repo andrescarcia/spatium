@@ -26,11 +26,11 @@ const Hero = () => {
     <section className="hero-section">
       <nav className="top-nav">
         <ul className="nav-links">
-          <li style={{cursor: 'pointer'}} onClick={() => document.querySelector('.rooms-section')?.scrollIntoView({ behavior: 'smooth' })}>Quartos</li>
+          <li style={{ cursor: 'pointer' }} onClick={() => document.querySelector('.rooms-section')?.scrollIntoView({ behavior: 'smooth' })}>Quartos</li>
           <li className="nav-separator">/</li>
-          <li style={{cursor: 'pointer'}} onClick={() => document.querySelector('.features-section')?.scrollIntoView({ behavior: 'smooth' })}>Serviços</li>
+          <li style={{ cursor: 'pointer' }} onClick={() => document.querySelector('.features-section')?.scrollIntoView({ behavior: 'smooth' })}>Serviços</li>
           <li className="nav-separator">/</li>
-          <li style={{cursor: 'pointer'}} onClick={() => document.querySelector('.contact-section')?.scrollIntoView({ behavior: 'smooth' })}>Contactos</li>
+          <li style={{ cursor: 'pointer' }} onClick={() => document.querySelector('.contact-section')?.scrollIntoView({ behavior: 'smooth' })}>Contactos</li>
         </ul>
         <div className="nav-icon">
           <ArrowUpRight size={48} strokeWidth={1} />
@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
             <div style={{ overflow: "hidden", display: "flex", alignItems: "center" }}>
               <motion.span variants={itemVariants} style={{ display: "inline-block" }}>Uni</motion.span>
-              <motion.span 
+              <motion.span
                 className="title-line"
                 variants={{
                   hidden: { scaleX: 0, opacity: 0 },
@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
           </motion.h1>
 
-          <motion.div 
+          <motion.div
             className="hero-meta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="hero-side-card"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -81,7 +81,7 @@ const Hero = () => {
         >
           <p className="side-card-title">RESERVA AGORA</p>
           <div className="side-card-image-box">
-            <img src="/Conforto.JPG" alt="Comfort Room" />
+            <img src={`${import.meta.env.BASE_URL}room4.png`} alt="Comfort Room" />
             <div className="side-card-arrow">
               <MoveRight size={20} strokeWidth={1.5} />
             </div>
@@ -98,7 +98,7 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <img src="/fachada1.1.png" alt="Spatium Residence Facade" />
+        <img src={`${import.meta.env.BASE_URL}fachada1.1.png`} alt="Spatium Residence Facade" />
       </motion.div>
     </section>
   );

@@ -49,7 +49,7 @@ const Gallery = () => {
         <div className="carousel-track">
           {duplicatedImages.map((img, index) => (
             <div className="carousel-item" key={index}>
-              <img src={img} alt={`Gallery image ${index + 1}`} />
+              <img src={`${import.meta.env.BASE_URL}${img.startsWith('/') ? img.slice(1) : img}`} alt={`Gallery image ${index + 1}`} />
             </div>
           ))}
         </div>

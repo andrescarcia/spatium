@@ -76,7 +76,7 @@ const Rooms = () => {
         >
           <h2>Constrói o teu<br/>Espaço Sustentável</h2>
         </motion.div>
-        <img src="/mesaexterior.png" alt="Outdoor Table" />
+        <img src={`${import.meta.env.BASE_URL}mesaexterior.png`} alt="Outdoor Table" />
       </div>
     </section>
   );
