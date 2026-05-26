@@ -1,0 +1,151 @@
+.rooms-section {
+  padding: 4rem 4vw;
+  border-top: 1px solid var(--border-color);
+}
+
+.rooms-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.rooms-main-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.rooms-view-all {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+}
+
+.room-grid-item {
+  padding: 2rem 2rem 6rem 0;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-grid-item:first-child {
+  padding-left: 0;
+}
+
+.room-grid-item:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.room-grid-item:nth-child(2) {
+  padding-left: 2rem;
+}
+
+.room-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+.room-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  max-width: 90%;
+}
+
+.room-action-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.room-action-btn:hover {
+  background-color: #e66236;
+}
+
+.room-grid-item:last-child .room-action-btn {
+  right: 0;
+}
+
+.room-grid-item:nth-child(2) .room-action-btn,
+.room-grid-item:first-child .room-action-btn {
+  right: 2rem;
+}
+
+.rooms-parallax-image {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-parallax-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.rooms-parallax-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+}
+
+.rooms-parallax-overlay h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 900px) {
+  .rooms-section {
+    padding: 3rem 5vw;
+  }
+  .rooms-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+  .room-grid-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem 0 5rem 0 !important;
+  }
+  .room-grid-item:last-child {
+    border-bottom: none;
+  }
+  .room-action-btn {
+    right: 0 !important;
+  }
+  .rooms-parallax-image {
+    height: 40vh;
+  }
+}
